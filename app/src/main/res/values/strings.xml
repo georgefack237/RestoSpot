@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RestoSpot</string>
+    <string name="api">https://rickandmortyapi.com/api</string>
+</resources>
