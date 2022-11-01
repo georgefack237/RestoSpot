@@ -13,4 +13,26 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+
+    <style name="MovieApp.MaterialComponents.Chip.Choice" parent="Widget.MaterialComponents.Chip.Choice">
+        <!-- Chip background color selector -->
+        <item name="chipBackgroundColor">@color/secondary</item>
+        <!-- Chip text color selector -->
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <!-- Outlined action chip
+   -->
+    <style name="MovieApp.MaterialComponents.Chip.Action" parent="Widget.MaterialComponents.Chip.Action">
+        <item name="chipBackgroundColor">@color/white</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="chipStrokeColor">@color/on_primary_light</item>
+        <item name="android:textColor">@color/on_primary</item>
+    </style>
+
+
+
+
 </resources>

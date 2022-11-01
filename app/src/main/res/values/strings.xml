@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">RestoSpot</string>
     <string name="api">https://rickandmortyapi.com/api</string>
+    <string name="discover_local_restaurants_n_and_dishes">Discover local restaurants \n and dishes</string>
+    <string name="search_for_restaurant">Search for restaurant ...</string>
+    <string name="top_restaurants">Top Restaurants</string>
+    <string name="view_all">View All</string>
+    <string name="main_menu">Main Menu</string>
+    <string name="notifications">Notifications</string>
+    <string name="snacks">Snacks</string>
 </resources>

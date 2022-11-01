@@ -1,45 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:paddingLeft="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/foodMarkCart"
-        android:layout_width="13dp"
-        android:layout_height="13dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:layout_centerVertical="true"/>
-
-    <TextView
-        android:id="@+id/itemNameCart"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@+id/foodMarkCart"
-        android:layout_marginStart="7dp"
-        android:text="Aloo Tikki"
-        android:fontFamily="@font/segoe_bold"
-        android:textSize="14sp"
-        android:textColor="@color/on_primary"
-        android:layout_centerVertical="true"/>
-
-
-    <TextView
-        android:id="@+id/itemPriceCart"
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_centerVertical="true"
-        android:text="\u20b9 250"
-        android:textColor="@color/on_primary"
-        android:fontFamily="@font/segoe_bold"
-        android:textSize="17sp"/>
+        app:cardCornerRadius="10dp"
+        android:layout_height="wrap_content">
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="0.1dp"
-        android:background="@color/on_primary"
-        android:layout_below="@+id/itemPriceCart"
-        android:layout_marginTop="10dp" />
 
-</RelativeLayout>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/hotelImage"
+                android:layout_width="180dp"
+                android:layout_height="95dp"
+                android:background="@color/on_primary_light"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/hotelName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/segoe_bold"
+                android:text="Madiba's Taste"
+                android:textColor="@color/on_primary"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hotelImage" />
+
+            <TextView
+                android:id="@+id/hotelLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="Yaounde, Soa"
+                android:textColor="@color/on_primary_light"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/hotelName"
+                app:layout_constraintTop_toBottomOf="@+id/hotelName" />
+
+            <RatingBar
+                android:id="@+id/hotelRating"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:numStars="4"
+                android:background="@color/primary"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/hotelLocation"
+                app:layout_constraintTop_toBottomOf="@+id/hotelLocation" />
+
+            <TextView
+                android:id="@+id/hotelReviews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="(500 Reviews)"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/hotelRating"
+                app:layout_constraintTop_toBottomOf="@+id/hotelLocation" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
