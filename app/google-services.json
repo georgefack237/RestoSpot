@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "940819275591",
+    "project_id": "restospot-8b92d",
+    "storage_bucket": "restospot-8b92d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:940819275591:android:3813fc4d46d30e4c2c3662",
+        "android_client_info": {
+          "package_name": "com.example.restospot"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "940819275591-vlq0f60f9ejjrqbgculcvifs89t92um6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbZi7fkPP2EtLMFoHBv9GXgy0enRAaK7Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "940819275591-vlq0f60f9ejjrqbgculcvifs89t92um6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
