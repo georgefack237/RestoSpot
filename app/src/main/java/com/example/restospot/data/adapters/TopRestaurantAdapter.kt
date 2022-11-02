@@ -11,9 +11,9 @@ import com.example.restospot.databinding.HotelCardBinding
 import com.squareup.picasso.Picasso
 
 
-class TopRestaurantAdapter : RecyclerView.Adapter<TopRestaurantAdapter.TodoViewHolder>() {
+class TopRestaurantAdapter : RecyclerView.Adapter<TopRestaurantAdapter.TopRestaurantViewHolder>() {
 
-    inner class TodoViewHolder(val binding: HotelCardBinding) : RecyclerView.ViewHolder(binding.root)
+    inner class TopRestaurantViewHolder(val binding: HotelCardBinding) : RecyclerView.ViewHolder(binding.root)
 
     private val diffCallback = object : DiffUtil.ItemCallback<Restaurant>() {
         override fun areItemsTheSame(oldItem:Restaurant, newItem: Restaurant): Boolean {
@@ -30,10 +30,10 @@ class TopRestaurantAdapter : RecyclerView.Adapter<TopRestaurantAdapter.TodoViewH
         get() = differ.currentList
         set(value) { differ.submitList(value) }
 
-    override fun getItemCount() = 3
+    override fun getItemCount() = restaurants.size
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {
-        return TodoViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopRestaurantViewHolder {
+        return TopRestaurantViewHolder(
             HotelCardBinding.inflate(
                 LayoutInflater.from(parent.context),
                 parent,
@@ -42,19 +42,19 @@ class TopRestaurantAdapter : RecyclerView.Adapter<TopRestaurantAdapter.TodoViewH
     }
 
     @SuppressLint("SetTextI18n")
-    override fun onBindViewHolder(holder: TodoViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TopRestaurantViewHolder, position: Int) {
         holder.binding.apply {
             val restaurant = restaurants[position]
-            hotelName.text = restaurant.name
-            hotelLocation.text = "${restaurant.country}, ${restaurant.city}"
-            hotelRating.rating = restaurant.rating.toFloat()
-            hotelReviews.text = "(${restaurant.reviews})"
+            restaurantName.text = restaurant.name
+            restaurantLocation.text = "${restaurant.country}, ${restaurant.city}"
+            restaurantRating.rating = restaurant.rating.toFloat()
+            restaurantReviews.text = "(${restaurant.reviews})"
             Picasso.get()
                 .load(restaurant.image)
                 .fit()
                 .centerCrop()
 
-                .into(hotelImage);
+                .into(restaurantImage);
 
         }
 

@@ -3,12 +3,15 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:background="@color/background"
-    android:paddingLeft="10dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
         app:cardCornerRadius="10dp"
+        android:paddingBottom="5dp"
+        android:layout_margin="5dp"
+        android:elevation="0dp"
+        android:outlineSpotShadowColor="@color/primary"
         android:layout_height="wrap_content">
 
 
@@ -18,7 +21,7 @@
 
 
             <ImageView
-                android:id="@+id/hotelImage"
+                android:id="@+id/restaurantImage"
                 android:layout_width="180dp"
                 android:layout_height="95dp"
                 android:background="@color/on_primary_light"
@@ -27,7 +30,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/hotelName"
+                android:id="@+id/restaurantName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
@@ -37,34 +40,35 @@
                 android:textColor="@color/on_primary"
                 android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/hotelImage" />
+                app:layout_constraintTop_toBottomOf="@+id/restaurantImage" />
 
             <TextView
-                android:id="@+id/hotelLocation"
+                android:id="@+id/restaurantLocation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:text="Yaounde, Soa"
                 android:textColor="@color/on_primary_light"
                 android:textSize="14sp"
-                app:layout_constraintStart_toStartOf="@+id/hotelName"
-                app:layout_constraintTop_toBottomOf="@+id/hotelName" />
+                app:layout_constraintStart_toStartOf="@+id/restaurantName"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantName" />
 
             <RatingBar
-                android:id="@+id/hotelRating"
+                android:id="@+id/restaurantRating"
                 style="@style/Widget.AppCompat.RatingBar.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="8dp"
+                android:backgroundTint="@color/primary"
                 android:numStars="4"
-                android:background="@color/primary"
+                android:progressTint="@color/primary"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/hotelLocation"
-                app:layout_constraintTop_toBottomOf="@+id/hotelLocation" />
+                app:layout_constraintStart_toStartOf="@+id/restaurantName"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantLocation" />
 
             <TextView
-                android:id="@+id/hotelReviews"
+                android:id="@+id/restaurantReviews"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="6dp"
@@ -73,8 +77,8 @@
                 android:text="(500 Reviews)"
                 android:textSize="12sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/hotelRating"
-                app:layout_constraintTop_toBottomOf="@+id/hotelLocation" />
+                app:layout_constraintStart_toEndOf="@+id/restaurantRating"
+                app:layout_constraintTop_toBottomOf="@+id/restaurantLocation" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

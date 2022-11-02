@@ -11,12 +11,12 @@ import retrofit2.http.Query
 
 interface RestaurantApi {
 
-    @GET("restaurants")
+    @GET("api/restaurants")
     suspend fun getRestaurants(): Response<List<Restaurant>>
 
 
-    @POST("/category_foods")
-    fun getCategoryFoods(@Body category: String): Response<List<Food>>
+    @GET("api/categoryFoods")
+   suspend fun getCategoryFoods(): Response<List<Food>>
 
     @POST("/restaurant_foods")
     fun getRestaurantFoods(@Body restaurant: String): Response<List<Food>>
